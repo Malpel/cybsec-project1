@@ -12,12 +12,10 @@
                 <th style="text-align:left">Account name</th>
                 <th style="text-align:right">Balance</th>
             </tr>
-			{% for account in accounts %}
 			<tr>
-				<td style="text-align:left">{{account.iban}}</td>
-				<td style="text-align:right">{{account.balance}}</td>
+				<td style="text-align:left">{{userAccount.iban}}</td>
+				<td style="text-align:right">{{userAccount.balance}}</td>
 			</tr>	
-			{% endfor %}
         </table>
 
         <h2>Transfer money</h2>
@@ -27,9 +25,7 @@
             
             <span>From:</span><br/>
             <select name="from">
-			{% for account in accounts %}
-                <option value="{{account.iban}}">{{account.iban}}</option>
-			{% endfor %}
+                <option value="{{userAccount.iban}}">{{userAccount.iban}}</option>
             </select><br/>
 
             <span>To:</span><br/>

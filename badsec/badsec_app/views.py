@@ -23,8 +23,9 @@ def account(request):
 		
 		transfer(sender, receiver, amount)
 	
-	accounts = accounts = Account.objects.all()
-	return render(request, 'badsec_app/accounts.html', { 'accounts': accounts })
+	userAccount = Account.objects.filter(pk=request.GET.get('account'))
+	accounts = Account.objects.exclude(owner=request.GET.get('user'))
+	return render(request, 'badsec_app/account.html', { 'userAccount': userAccount, 'accounts': accounts })
 
 def amount_is_valid(balance, amount):
 	if amount < 0 or balance < amount:
