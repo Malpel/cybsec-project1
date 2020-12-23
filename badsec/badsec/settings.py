@@ -71,7 +71,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'badsec.wsgi.application'
 
-LOGIN_URL = '/login/'
+#LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 
 # Database

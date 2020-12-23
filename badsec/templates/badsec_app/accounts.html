@@ -20,7 +20,7 @@
         
         <ul>
 		    {% for a in accounts %}
-		    <li>{{a.iban}}
+		    <li><a href="/account/?account={{a.id}}">{{a.iban}}</a>
             </li>
 		    {% endfor %}
 		</ul>

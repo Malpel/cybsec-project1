@@ -1,7 +1,18 @@
-<h2>Login</h2>
+<!DOCTYPE html>
 
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Login</title>
+</head>
+
+<body>
+  <h2>Login</h2>
+  {% block content %}
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+  </form>
+  {% endblock %}
+</body>
